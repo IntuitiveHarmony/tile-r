@@ -1,25 +1,40 @@
+import {useState} from 'react'
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+const App = () => {
+  const [tile, setTile] = useState()
+  const [size, setSize] = useState(300)
+
+  const handleTile = (event) => {
+    setTile(event.target.value)
+  }
+
+  const handleResize = (event) => {
+    setSize(event.target.value)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <div style={{
+            backgroundImage: "url(" + tile + ")",
+            backgroundSize: size + 'px',
+            height: '100vh'
+          }}>
+        <div className='info'>
+          <div className='input'>
+            <label>Image Url:</label><br/>
+            <input type='text' onChange={handleTile} placeholder='paste url...'></input>
+          </div>
+          <div className='input'>
+            <label>Resolution: {size}px</label><br/>
+            <input onChange={handleResize} type='range' min='10' max='1000' ></input>
+          </div>
+        </div>
+      </div>
+    </>
+  )
+
 }
 
 export default App;
