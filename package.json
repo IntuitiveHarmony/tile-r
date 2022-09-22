@@ -1,7 +1,7 @@
 {
   "name": "tile-r",
   "version": "0.1.0",
-  "homepage": "https://intuitiveharmony.github.io/tile-r",
+  "homepage": "https://intuitiveharmony.github.io/tile-r/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
