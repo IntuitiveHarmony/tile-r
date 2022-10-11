@@ -15,7 +15,7 @@ const App = () => {
 
   return (
     <>
-      <div style={{
+      <div className='back' style={{
             backgroundImage: "url(" + tile + ")",
             backgroundSize: size + 'px',
             height: '100vh'

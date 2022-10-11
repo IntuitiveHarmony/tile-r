@@ -8,3 +8,6 @@
   background-color: rgba(0, 0, 0, .8);
   padding: .5em;
 }
+.back {
+  background-position: 0px 60px;
+}
